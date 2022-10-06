@@ -1,9 +1,8 @@
 package lesson3;
 
 import java.util.Scanner;
-
-    public class hw_3_1 {
-        public static void main(String[] args) {
+public class hw_3_1 {
+    public static void main(String[] args) {
 
         Scanner scanAction = new Scanner(System.in);
         short symbol;
