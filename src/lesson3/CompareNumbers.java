@@ -15,8 +15,8 @@ public class CompareNumbers {
             System.out.println("First number is bigger");
         } else if (a < b) {
             System.out.println("First number is smaller than second number");
-        } else if (a == b) {
-            System.out.println("First number equals second number");
+        } else {
+            System.out.println("First number equals the second number");
         }
 
     }

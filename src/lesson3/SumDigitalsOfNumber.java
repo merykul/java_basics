@@ -11,11 +11,10 @@ public class SumDigitalsOfNumber {
         sum(n, sum);
     }
     public static void sum(int n, int sum){
-        if(n!=0){
-            sum+=n%10;
+        if(n != 0){
+            sum += n % 10;
             sum(n/10, sum);
-        }
-        else System.out.println(sum);
+        } else System.out.println(sum);
     }
 }
 

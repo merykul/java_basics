@@ -9,11 +9,11 @@ public class ArmstrongKub {
         int sot;
         int i = 1;
 
-        for (i = 1; i < 501; i++) {
+        for (i = 1; i <= 500; i++) {
             ed = 1 % 10;
             des = i % 100 / 10;
             sot = i / 100;
-            if (pow(ed,3)+pow(des,3)+pow(sot,3) ==i) {
+            if (pow(ed,3) +pow(des,3) +pow(sot,3) == i) {
                 System.out.println(i);
             }
         }

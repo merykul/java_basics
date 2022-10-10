@@ -8,8 +8,8 @@ public class FactC {
         Scanner scan = new Scanner(System.in);
         n = scan.nextInt();
         int result = 1;
-        for (int i = 1; i <=n; i ++){
-            result = result*i;
+        for (int i = 1; i <= n; i ++){
+            result = result * i;
         }
         return result;
     }
