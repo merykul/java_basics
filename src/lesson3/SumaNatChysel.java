@@ -5,7 +5,7 @@ public class SumaNatChysel {
         int s = 0;
         for (int i = 1; i <= 10; i++) {
             s += i;
-            System.out.println("s="+s);
+            System.out.println("s=" + s);
         }
         System.out.println("Sum is " + s);
     }
