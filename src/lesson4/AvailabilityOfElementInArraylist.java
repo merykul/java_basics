@@ -9,7 +9,7 @@ public class AvailabilityOfElementInArraylist {
         System.out.println("Enter symbol to check: ");
         Scanner scan = new Scanner(System.in);
         String input = scan.next();
-        List aList = new ArrayList();
+        List<String> aList = new ArrayList<>();
         aList.add("M");
         aList.add("E");
         aList.add("R");
