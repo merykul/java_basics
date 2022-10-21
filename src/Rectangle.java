@@ -1,20 +1,18 @@
 
 public class Rectangle {
+    public int lengthOfObject;
+    public int widthOfObject;
     public Rectangle(int lengthOfObject, int widthOfObject) {
-        lengthOfObject = 0;
-        widthOfObject = 0;
+        this.lengthOfObject = lengthOfObject;
+        this.widthOfObject = widthOfObject;
     }
 
-    public int Area (int lengthOfObject, int widthOfObject) {
-    int area = 0;
-    area = lengthOfObject * widthOfObject;
-    return area;
+    public int area (int lengthOfObject, int widthOfObject) {
+    return  lengthOfObject * widthOfObject;
     }
 
-    public int Perimeter (int lengthOfObject, int widthOfObject) {
-    int perimeter = 0;
-    perimeter = (lengthOfObject + widthOfObject) * 2;
-    return perimeter;
+    public int perimeter (int lengthOfObject, int widthOfObject) {
+    return (lengthOfObject + widthOfObject) * 2;
     }
 
 }
