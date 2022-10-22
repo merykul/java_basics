@@ -1,16 +1,16 @@
 package lesson6tasks;
 
 public class Circle {
-    public double pi = 3.14;
-    public double radius;
-    public Circle (double radius, double pi) {
+    private double pi = 3.14;
+    private double radius;
+    public Circle (double radius) {
        this.pi = pi;
        this.radius = radius;
     }
-    public double circleArea (double radius, double pi) {
+    public double circleArea () {
         return  pi * radius;
     }
-    public double circlePerimeter (double radius, double pi) {
+    public double circlePerimeter () {
         return  2 * pi * radius;
     }
 }

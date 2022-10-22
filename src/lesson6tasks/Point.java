@@ -7,8 +7,7 @@ public class Point {
         this.x = x;
         this.y = y;
     }
-    public static double calculateDistance (Point first, Point second) {
-        return Math.sqrt((first.x - second.x) * (first.x - second.x) +
-                (first.y - second.y) * (first.y - second.y));
+    public double calculateDistance (Point first) {
+        return Math.sqrt(Math.pow((this.x - first.x), 2) + Math.pow((this.y - first.y), 2));
     }
 }

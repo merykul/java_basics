@@ -1,18 +1,16 @@
 package lesson6tasks;
 
 public class Dog {
+    private String name;
     private int age;
-    public String name;
-    public String breed;
-    public Dog (String breed, int age, String name) {
+    public Dog (String name, int age) {
         this.age = age;
         this.name = name;
-        this.breed = breed;
     }
-    public String sit (String breed, int age, String name) {
-        return "Dog is sitting";
+    public String sit () {
+        return name + " is sitting";
     }
-    public String eat (String breed, int age, String name) {
-        return "Dog is eating";
+    public String yearsOld () {
+        return name + " is " + age + " years old";
     }
 }
