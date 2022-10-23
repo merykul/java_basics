@@ -17,8 +17,13 @@ public class Triangle extends Shape {
     }
 
     @Override
-    public double countArea() {
+    public double getArea() {
         return high * side1 / 2;
+    }
+
+    @Override
+    public String dataAboutShape() {
+        return "Perimeter of triangle is: " + this.getPerimeter() + " and area is: " + this.getArea();
     }
 
     public double getSide1() {

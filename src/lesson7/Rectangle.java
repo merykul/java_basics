@@ -10,7 +10,12 @@ public class Rectangle extends Shape {
     }
 
     @Override
-    public double countArea() {
+    public double getArea() {
         return width * high;
+    }
+
+    @Override
+    public String dataAboutShape() {
+        return "Perimeter of rectangle is: " + this.getPerimeter() + " and area is: " + this.getArea();
     }
 }

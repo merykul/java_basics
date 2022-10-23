@@ -15,7 +15,11 @@ public class Circle extends Shape {
     }
 
     @Override
-    public double countArea() {
+    public double getArea() {
         return pi * r * r;
+    }
+    @Override
+    public String dataAboutShape () {
+        return "Perimeter of circle is: " + this.getPerimeter() + " and area of circle is: " + this.getArea();
     }
 }
