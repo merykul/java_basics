@@ -8,6 +8,8 @@ public abstract class Shape {
     }
     public Shape(double width, double high) {
     }
+    public Shape(double high) {
+    }
 
     public void setHigh(double high) {
         this.high = high;
@@ -18,7 +20,7 @@ public abstract class Shape {
     }
 
     public abstract double getPerimeter ();
-    public abstract void countArea ();
+    public abstract double countArea ();
 }
 
 

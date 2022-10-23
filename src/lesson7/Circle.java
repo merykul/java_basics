@@ -2,20 +2,20 @@ package lesson7;
 
 public class Circle extends Shape {
     private double pi = 3.14;
-    private double d;
+    private double r;
 
-    public Circle (double d) {
+    public Circle (double r) {
         super();
-        this.d = d;
+        this.r = r;
     }
 
     @Override
     public double getPerimeter() {
-        return d * pi;
+        return 2 * r * pi;
     }
 
     @Override
-    public void countArea() {
-
+    public double countArea() {
+        return pi * r * r;
     }
 }

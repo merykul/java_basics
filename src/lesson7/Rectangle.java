@@ -10,7 +10,7 @@ public class Rectangle extends Shape {
     }
 
     @Override
-    public void countArea() {
-
+    public double countArea() {
+        return width * high;
     }
 }
