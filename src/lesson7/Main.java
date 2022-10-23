@@ -16,5 +16,14 @@ public class Main {
         r.setHigh(16);
         r.setWidth(12);
         System.out.println(r.dataAboutShape());
+
+        Lion l = new Lion();
+        l.setName("Honey");
+        System.out.println(l.eat());
+
+        Horse h = new Horse();
+        h.setName("Bae");
+        h.setAge(4);
+        System.out.println(h.sleep());
     }
 }
