@@ -19,5 +19,9 @@ public class Main {
         Point first = new Point(5, 4);
         Point second = new Point(6, 8);
         System.out.println(second.calculateDistance(first));
+        
+        String row = "45";
+        int number = Integer.valueOf(row);
+        System.out.println(number);
     }
 }
