@@ -8,7 +8,7 @@ public class Horse extends Animal {
 
     @Override
     public String sleep() {
-        return "This horse is " + getAge() + " years old, so he sleeping 6 hours per night";
+        return "This horse is " + getAge() + " years old, so he sleeps 6 hours per night";
     }
 
     @Override

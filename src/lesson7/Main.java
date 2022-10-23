@@ -19,11 +19,22 @@ public class Main {
 
         Lion l = new Lion();
         l.setName("Honey");
+        l.setAge(6);
         System.out.println(l.eat());
 
         Horse h = new Horse();
         h.setName("Bae");
         h.setAge(4);
         System.out.println(h.sleep());
+
+        Mouse m = new Mouse();
+        m.setName("Miki");
+        m.setAge(1);
+        System.out.println(m.eat());
+
+        Python p = new Python();
+        p.setName("Rudy");
+        p.setAge(1);
+        System.out.println(p.sleep());
     }
 }
