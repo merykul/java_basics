@@ -1,7 +1,7 @@
 package lesson7;
 
 public class Circle extends Shape {
-    private double pi = 3.14;
+    private static final double PI = 3.14;
     private double r;
 
     public Circle (double r) {
