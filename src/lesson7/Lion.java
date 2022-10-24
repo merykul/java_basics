@@ -2,8 +2,8 @@ package lesson7;
 
 public class Lion extends Animal {
 
-    public Lion () {
-        super();
+    public Lion (int age, String name) {
+        super(age, name);
     }
 
     @Override

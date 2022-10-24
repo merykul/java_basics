@@ -1,11 +1,11 @@
 package lesson7;
 
 public class Triangle extends Shape {
+    private double high;
     private double side1;
     private double side2;
     private double side3;
-    public Triangle (double high) {
-        super(high);
+    public Triangle (double high, double side1, double side2, double side3) {
         this.side1 = side1;
         this.side2 = side2;
         this.side3 = side3;
@@ -38,6 +38,10 @@ public class Triangle extends Shape {
         return side3;
     }
 
+    public double getHigh() {
+        return high;
+    }
+
     public void setSide1(double side1) {
         this.side1 = side1;
     }
@@ -48,5 +52,9 @@ public class Triangle extends Shape {
 
     public void setSide3(double side3) {
         this.side3 = side3;
+    }
+
+    public void setHigh(double high) {
+        this.high = high;
     }
 }

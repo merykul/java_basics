@@ -1,6 +1,10 @@
 package lesson7;
 
 public class Horse extends Animal {
+    public Horse(int age, String name) {
+        super(age, name);
+    }
+
     @Override
     public String speak() {
         return "frr";

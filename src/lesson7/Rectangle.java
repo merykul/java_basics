@@ -1,8 +1,14 @@
 package lesson7;
 
 public class Rectangle extends Shape {
-    public Rectangle (double width, double high) {
-        super(width, high);
+    private double high;
+    private double width;
+    private double diagonal;
+    public Rectangle (double width, double high, double diagonal) {
+        this.high = high;
+        this.width = width;
+        this.diagonal = diagonal;
+
     }
     @Override
     public double getPerimeter() {
@@ -17,5 +23,21 @@ public class Rectangle extends Shape {
     @Override
     public String dataAboutShape() {
         return "Perimeter of rectangle is: " + this.getPerimeter() + " and area is: " + this.getArea();
+    }
+
+    public double getWidth() {
+        return width;
+    }
+
+    public void setWidth(double width) {
+        this.width = width;
+    }
+
+    public double getHigh() {
+        return high;
+    }
+
+    public void setHigh(double high) {
+        this.high = high;
     }
 }

@@ -1,6 +1,10 @@
 package lesson7;
 
 public class Python extends Animal {
+    public Python(int age, String name) {
+        super(age, name);
+    }
+
     @Override
     public String speak() {
         return  "ssss";

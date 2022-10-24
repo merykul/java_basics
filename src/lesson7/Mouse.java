@@ -1,6 +1,10 @@
 package lesson7;
 
 public class Mouse extends Animal{
+    public Mouse(int age, String name) {
+        super(age, name);
+    }
+
     @Override
     public String speak() {
         return  "pi-pi";
