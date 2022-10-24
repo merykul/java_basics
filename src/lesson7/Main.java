@@ -3,6 +3,18 @@ package lesson7;
 public class Main {
     public static void main(String[] args) {
 
+        Elementary e = new Elementary(1000, 1);
+        System.out.println(e.information());
+
+        Intermediate i = new Intermediate(1000,1);
+        System.out.println(i.information());
+
+        UpperIntermediate u = new UpperIntermediate(1000,1);
+        System.out.println(u.information());
+
+        Advanced a = new Advanced(1000, 1);
+        System.out.println(a.information());
+
         Triangle t = new Triangle(8,12,23,15);
         System.out.println(t.dataAboutShape());
 
