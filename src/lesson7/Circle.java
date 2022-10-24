@@ -1,7 +1,7 @@
 package lesson7;
 
 public class Circle extends Shape {
-    private double pi = 3.14;
+    private static final double PI = 3.14;
     private double r;
 
     public Circle (double r) {
@@ -11,12 +11,12 @@ public class Circle extends Shape {
 
     @Override
     public double getPerimeter() {
-        return 2 * r * pi;
+        return 2 * r * PI;
     }
 
     @Override
     public double getArea() {
-        return pi * r * r;
+        return PI * r * r;
     }
     @Override
     public String dataAboutShape () {
