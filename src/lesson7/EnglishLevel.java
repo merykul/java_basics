@@ -1,9 +1,9 @@
 package lesson7;
 
-public abstract  class English {
+public abstract  class EnglishLevel {
     private int amountOfWords;
     private int times;
-    public English(int amountOfWords, int times) {
+    public EnglishLevel (int amountOfWords, int times) {
         this.amountOfWords = amountOfWords;
         this.times = times;
     }

@@ -1,6 +1,6 @@
 package lesson7;
 
-public class Intermediate extends English {
+public class Intermediate extends EnglishLevel {
     public Intermediate (int amountOfWords, int times) {
         super(amountOfWords, times);
     }
