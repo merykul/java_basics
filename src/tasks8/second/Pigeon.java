@@ -1,6 +1,6 @@
 package tasks8.second;
 
-public class Pigeon extends Animal implements Flyable {
+public class Pigeon extends Animal implements Flyable, Comparable<Pigeon> {
     public Pigeon(String name, int age, int weight) {
         super(name, age, weight);
     }
@@ -17,5 +17,10 @@ public class Pigeon extends Animal implements Flyable {
     @Override
     public String fly() {
         return getName() + " can fly";
+    }
+
+    @Override
+    public int compareTo(Pigeon o) {
+        return Integer.compare(getAge(),o.getAge() );
     }
 }

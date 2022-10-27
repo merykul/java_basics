@@ -1,6 +1,6 @@
 package tasks8.second;
 
-public class Crucian extends Animal implements Swimmable {
+public class Crucian extends Animal implements Swimmable, Comparable<Crucian> {
     public Crucian(String name, int age, int weight) {
         super(name, age, weight);
     }
@@ -15,5 +15,10 @@ public class Crucian extends Animal implements Swimmable {
     @Override
     public String swim() {
         return getName() + " is able to swim";
+    }
+
+    @Override
+    public int compareTo(Crucian o) {
+        return Integer.compare(getAge(),o.getAge() );
     }
 }
