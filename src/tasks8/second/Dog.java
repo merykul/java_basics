@@ -1,6 +1,6 @@
 package tasks8.second;
 
-public class Dog extends Animal implements Runable, Comparable<Dog> {
+public class Dog extends Animal implements Runable {
     public Dog(String name, int age, int weight) {
         super(name, age, weight);
     }
@@ -21,7 +21,7 @@ public class Dog extends Animal implements Runable, Comparable<Dog> {
     }
 
     @Override
-    public int compareTo(Dog o) {
-        return Integer.compare(getAge(),o.getAge() );
+    public int compareTo(Object o) {
+        return 0;
     }
 }

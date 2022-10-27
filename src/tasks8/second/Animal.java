@@ -1,6 +1,6 @@
 package tasks8.second;
 
-public abstract class Animal {
+public abstract class Animal implements Comparable {
     private String name;
     private int weight;
     private int age;
@@ -12,6 +12,7 @@ public abstract class Animal {
     }
 
     public abstract String eat();
+
     public abstract String say();
 
     public int getAge() {
@@ -37,4 +38,5 @@ public abstract class Animal {
     public void setWeight(int weight) {
         this.weight = weight;
     }
+
 }

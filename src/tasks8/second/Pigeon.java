@@ -1,9 +1,10 @@
 package tasks8.second;
 
-public class Pigeon extends Animal implements Flyable, Comparable<Pigeon> {
+public class Pigeon extends Animal implements Flyable {
     public Pigeon(String name, int age, int weight) {
         super(name, age, weight);
     }
+
     @Override
     public String eat() {
         return getName() + " eats seeds and small insects";
@@ -20,7 +21,7 @@ public class Pigeon extends Animal implements Flyable, Comparable<Pigeon> {
     }
 
     @Override
-    public int compareTo(Pigeon o) {
-        return Integer.compare(getAge(),o.getAge() );
+    public int compareTo(Object o) {
+        return 0;
     }
 }
