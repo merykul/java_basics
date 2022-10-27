@@ -21,6 +21,11 @@ public class Cat extends Animal implements Runable {
     }
 
     @Override
+    public int compareTo(Animal o) {
+        return Integer.compare(this.getAge(), o.getAge());
+    }
+
+    @Override
     public int compareTo(Object o) {
         return 0;
     }

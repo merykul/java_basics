@@ -25,8 +25,4 @@ public class Main {
         Arrays.sort(animal);
         System.out.println(cat.compareTo(dog));
     }
-
-    public int compareTo(Animal a, Animal b) {
-        return Integer.compare(a.getAge(), b.getAge());
-    }
 }
