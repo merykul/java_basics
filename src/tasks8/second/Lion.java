@@ -15,10 +15,6 @@ public class Lion extends Animal implements Runable {
         return getName() + " often says rrr";
     }
 
-    @Override
-    public int compareTo(Animal o) {
-        return 0;
-    }
 
     @Override
     public String run() {

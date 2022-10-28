@@ -39,5 +39,7 @@ public abstract class Animal implements Comparable {
         this.weight = weight;
     }
 
-    public abstract int compareTo(Animal o);
+    public int compareTo(Animal o){
+        return Integer.compare(this.age, o.age);
+    }
 }

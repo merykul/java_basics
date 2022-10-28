@@ -15,10 +15,6 @@ public class Pigeon extends Animal implements Flyable {
         return getName() + " is saying prpr";
     }
 
-    @Override
-    public int compareTo(Animal o) {
-        return 0;
-    }
 
     @Override
     public String fly() {

@@ -16,11 +16,6 @@ public class Crucian extends Animal implements Swimmable {
     }
 
     @Override
-    public int compareTo(Animal o) {
-        return 0;
-    }
-
-    @Override
     public String swim() {
         return getName() + " is able to swim";
     }
@@ -29,4 +24,5 @@ public class Crucian extends Animal implements Swimmable {
     public int compareTo(Object o) {
         return 0;
     }
+
 }
