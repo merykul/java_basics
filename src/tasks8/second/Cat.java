@@ -15,13 +15,10 @@ public class Cat extends Animal implements Runable {
         return getName() + " say miy-miy";
     }
 
+
     @Override
     public String run() {
         return "Cat can run";
     }
 
-    @Override
-    public int compareTo(Object o) {
-        return 0;
-    }
 }

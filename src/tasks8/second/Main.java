@@ -18,11 +18,12 @@ public class Main {
         Pigeon pigeon = new Pigeon("Pigy", 3, 1);
         System.out.println(pigeon.fly());
 
-        Animal[] animal = {cat, fish, dog, lion, pigeon};
+        Animal[] animal = {cat,fish, dog, lion, pigeon};
         for (Animal a : animal) {
             System.out.println(a);
         }
         Arrays.sort(animal);
         System.out.println(cat.compareTo(dog));
+        System.out.println(cat.compareToWeight(lion));
     }
 }

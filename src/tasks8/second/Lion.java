@@ -21,8 +21,4 @@ public class Lion extends Animal implements Runable {
         return "Lion is able to run";
     }
 
-    @Override
-    public int compareTo(Object o) {
-        return 0;
-    }
 }

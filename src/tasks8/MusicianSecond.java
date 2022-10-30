@@ -9,7 +9,7 @@ public class MusicianSecond implements Violin {
     }
 
     public String sound(){
-        return getName() + " can play on " + " violin, and violin sounds warm, lyrical, rich, clear, deep, smooth, brilliant.";
+        return getName() + " can play on " + Violin.super.sound();
     }
 
     public String getName() {

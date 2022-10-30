@@ -21,8 +21,4 @@ public class Pigeon extends Animal implements Flyable {
         return getName() + " can fly";
     }
 
-    @Override
-    public int compareTo(Object o) {
-        return 0;
-    }
 }

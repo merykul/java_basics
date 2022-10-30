@@ -8,7 +8,7 @@ public class MusicianThird implements Drum {
     }
 
     public String sound(){
-        return getName() + " can play on " + " drum, and drum can sound tight, they can have a crack, they can be snappy, bright, tight, dry.";
+        return getName() + " can play on " + Drum.super.sound();
     }
 
     public String getName() {

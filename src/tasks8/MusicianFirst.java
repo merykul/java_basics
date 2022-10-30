@@ -6,7 +6,7 @@ public class MusicianFirst implements Piano {
     }
     @Override
     public String sound(){
-        return getName() + " can play on " + "Piano, and piano sounds sweet, round, dark, and rich.";
+        return getName() + " can play on " + Piano.super.sound();
     }
 
    private String name;
