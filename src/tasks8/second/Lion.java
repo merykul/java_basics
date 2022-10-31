@@ -21,4 +21,5 @@ public class Lion extends Animal implements Runable {
         return "Lion is able to run";
     }
 
+
 }

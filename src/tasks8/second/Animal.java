@@ -1,6 +1,6 @@
 package tasks8.second;
 
-public abstract class Animal implements Comparable {
+public abstract class Animal implements Comparable<Animal> {
     private String name;
     private int weight;
     private int age;
@@ -39,6 +39,7 @@ public abstract class Animal implements Comparable {
         this.weight = weight;
     }
 
+    @Override
     public int compareTo(Animal o){
         return Integer.compare(this.getAge(),o.getAge());
     }
