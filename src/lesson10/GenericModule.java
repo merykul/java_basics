@@ -3,14 +3,10 @@ package lesson10;
 import java.util.Scanner;
 
 public class GenericModule {
+
+    // 1) створити статичний вкладений клас-контейнер, який дозволяє зберігати будь-які об’єкти
+    // разом із джерелом цих даних.
     static class SaveWithReferences {
-
-    }
-
-   // 1) створити статичний вкладений клас-контейнер, який дозволяє зберігати будь-які об’єкти
-   // разом із джерелом цих даних.
-
-    static class Numbers<Number>{
 
     }
 
@@ -18,11 +14,19 @@ public class GenericModule {
     // разом із можливими мінімальним і максимальним значеннями. Це особлива форма трійки.
     // Усі три значення мають загальний тип, який має бути підкласом Number.
 
-    interface Define{
+    static class Numbers<Number> {
+
+    }
+
+    // 3) Вкладений інтерфейс який оголошує типовий контракт конвертера. Він працює з двома
+    // незалежними загальними типами. Він визначає метод перетворення, який приймає один
+    // параметр одного типу та повертає перетворений результат іншого типу.
+
+    interface Define {
         void convert(int number);
     }
 
-    static class Defined implements GenericModule.Define{
+    static class Defined implements GenericModule.Define {
 
         @Override
         public void convert(int number) {
@@ -33,34 +37,30 @@ public class GenericModule {
         }
     }
 
-   // 3) Вкладений інтерфейс який оголошує типовий контракт конвертера. Він працює з двома
-   // незалежними загальними типами. Він визначає метод перетворення, який приймає один
-   // параметр одного типу та повертає перетворений результат іншого типу.
+    //4) створити статичний вкладений клас-контейнер, який відстежує лише максимальне значення.
+    //Він працює з порівнюваними об'єктами і дозволяє вводити нові значення. Щоразу, коли ви
+    //вводите значення, воно зберігається, лише якщо нове значення більше ніж поточний макс.
+    //       (Створити конструктор, методи put, getMax)
 
-    public static class Max{
+    public static class Max {
         int i = 0;
         int b = 0;
 
-        public void put (int i, int b){
+        public void put(int i, int b) {
             Scanner scanner = new Scanner(System.in);
             i = scanner.nextInt();
             b = scanner.nextInt();
         }
 
-        static class MaxFinding{
-            public int getMax(int i, int b){
-                if (i > b){
+        static class MaxFinding {
+            public int getMax(int i, int b) {
+                if (i > b) {
                     return i;
-                }
-                else
+                } else
                     return b;
             }
         }
 
     }
 
-    //4) створити статичний вкладений клас-контейнер, який відстежує лише максимальне значення.
-    //Він працює з порівнюваними об'єктами і дозволяє вводити нові значення. Щоразу, коли ви
-    //вводите значення, воно зберігається, лише якщо нове значення більше ніж поточний макс.
-    //       (Створити конструктор, методи put, getMax)
 }
