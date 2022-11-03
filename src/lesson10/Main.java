@@ -5,8 +5,8 @@ public class Main {
         GenericModule genericModule = new GenericModule();
         GenericModule.SaveWithReferences save = new GenericModule.SaveWithReferences();
 
-        GenericModule.Max.MaxFinding max = new GenericModule.Max.MaxFinding();
-        System.out.println(max.getMax(8,10));
+        GenericModule.MaxFinding max = new GenericModule.MaxFinding();
+        System.out.println(max.getMax(1,1));
 
 
     }

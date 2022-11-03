@@ -26,7 +26,17 @@ public class GenericModule {
         void convert(int number);
     }
 
-    static class Defined implements GenericModule.Define {
+    static class Defined<T> implements GenericModule.Define {
+        private T value;
+
+        public void set(T value) {
+            this.value = value;
+        }
+
+        public T get() {
+            return value;
+        }
+
 
         @Override
         public void convert(int number) {
@@ -42,25 +52,23 @@ public class GenericModule {
     //вводите значення, воно зберігається, лише якщо нове значення більше ніж поточний макс.
     //       (Створити конструктор, методи put, getMax)
 
-    public static class Max {
-        int i = 0;
-        int b = 0;
+
+    static class MaxFinding {
 
         public void put(int i, int b) {
+        }
+
+        public int getMax(int i, int b) {
+            System.out.println("Enter number: ");
             Scanner scanner = new Scanner(System.in);
             i = scanner.nextInt();
             b = scanner.nextInt();
+            if (i > b) {
+                return i;
+            } else
+                return b;
         }
-
-        static class MaxFinding {
-            public int getMax(int i, int b) {
-                if (i > b) {
-                    return i;
-                } else
-                    return b;
-            }
-        }
-
     }
 
 }
+
