@@ -31,9 +31,8 @@ public class GenericModule {
 
     static class MaxFinding<T> {
         private T maxValue;
+        public MaxFinding(T value1, T value2){
 
-        public void set(T value) {
-            this.maxValue = value;
         }
 
         public T getMax() {

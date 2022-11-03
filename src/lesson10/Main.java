@@ -3,7 +3,7 @@ package lesson10;
 public class Main {
     public static void main(String[] args) {
 
-        GenericModule.MaxFinding max = new GenericModule.MaxFinding();
+        GenericModule.MaxFinding max = new GenericModule.MaxFinding(1,1);
         System.out.println(max.put(1,1));
 
         GenericModule.Defined defined = new GenericModule.Defined();
