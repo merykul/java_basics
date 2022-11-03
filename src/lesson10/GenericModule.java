@@ -22,28 +22,18 @@ public class GenericModule {
     // незалежними загальними типами. Він визначає метод перетворення, який приймає один
     // параметр одного типу та повертає перетворений результат іншого типу.
 
-    interface Define {
-        void convert(int number);
+    interface Define<T> {
+        void convert(T value);
     }
 
     static class Defined<T> implements GenericModule.Define {
-        private T value;
-
-        public void set(T value) {
-            this.value = value;
-        }
-
-        public T get() {
-            return value;
-        }
-
 
         @Override
-        public void convert(int number) {
+        public void convert(Object value) {
             Scanner scan = new Scanner(System.in);
             System.out.println("Enter number to convert to string: ");
-            number = scan.nextInt();
-            System.out.println(Integer.toString(number));
+            value = scan.next();
+            System.out.println(value.toString());
         }
     }
 
@@ -53,7 +43,19 @@ public class GenericModule {
     //       (Створити конструктор, методи put, getMax)
 
 
-    static class MaxFinding {
+    static class MaxFinding<T> {
+        private T maxValue;
+
+        public void set(T value) {
+            this.maxValue = value;
+        }
+
+        public T get() {
+            return maxValue;
+        }
+        public T put(){
+            return null;
+        }
 
         public void put(int i, int b) {
         }
