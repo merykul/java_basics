@@ -9,17 +9,17 @@ public class GenericModule {
     // параметр одного типу та повертає перетворений результат іншого типу.
 
     interface Define<T> {
-        String convert(T value);
+        <T> T convert(Object value);
     }
 
     static class Defined<T> implements GenericModule.Define {
 
         @Override
-        public String convert(Object value) {
+        public T convert(Object value) {
             Scanner scan = new Scanner(System.in);
             System.out.println("Enter number to convert to string: ");
             value = scan.next();
-            return value.toString();
+            return (T) value.toString();
         }
     }
 
