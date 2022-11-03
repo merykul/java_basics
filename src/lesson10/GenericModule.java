@@ -23,17 +23,17 @@ public class GenericModule {
     // параметр одного типу та повертає перетворений результат іншого типу.
 
     interface Define<T> {
-        void convert(T value);
+        String convert(T value);
     }
 
     static class Defined<T> implements GenericModule.Define {
 
         @Override
-        public void convert(Object value) {
+        public String convert(Object value) {
             Scanner scan = new Scanner(System.in);
             System.out.println("Enter number to convert to string: ");
             value = scan.next();
-            System.out.println(value.toString());
+            return value.toString();
         }
     }
 
@@ -46,6 +46,10 @@ public class GenericModule {
     static class MaxFinding<T> {
         private T maxValue;
 
+        public MaxFinding() {
+
+        }
+
         public void set(T value) {
             this.maxValue = value;
         }
@@ -53,11 +57,9 @@ public class GenericModule {
         public T get() {
             return maxValue;
         }
-        public T put(){
-            return null;
-        }
 
-        public void put(int i, int b) {
+        public T put() {
+            return null;
         }
 
         public int getMax(int i, int b) {
