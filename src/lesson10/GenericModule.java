@@ -46,31 +46,27 @@ public class GenericModule {
     static class MaxFinding<T> {
         private T maxValue;
 
-        public MaxFinding() {
-
-        }
-
         public void set(T value) {
             this.maxValue = value;
         }
 
-        public T get() {
+        public T getMax() {
             return maxValue;
         }
 
-        public T put() {
-            return null;
-        }
-
-        public int getMax(int i, int b) {
+        public T put(T value1, T value2) {
+            Scanner scanValue = new Scanner(System.in);
             System.out.println("Enter number: ");
-            Scanner scanner = new Scanner(System.in);
-            i = scanner.nextInt();
-            b = scanner.nextInt();
-            if (i > b) {
-                return i;
-            } else
-                return b;
+            value1 = (T) scanValue.next();
+            System.out.println("Enter second number: ");
+            value2 = (T) scanValue.next();
+            if ((int) value1 > (int) value2) {
+                maxValue = value1;
+                return maxValue;
+            } else {
+                maxValue = value2;
+                return maxValue;
+            }
         }
     }
 
