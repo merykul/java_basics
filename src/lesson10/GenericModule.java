@@ -9,17 +9,17 @@ public class GenericModule {
     // параметр одного типу та повертає перетворений результат іншого типу.
 
     interface Define<T> {
-        <T> T convert(Object value);
+        <T1, T2> T1 convert(T1 value);
     }
 
-    static class Defined<T> implements GenericModule.Define {
+    static class Defined<T1, T2> implements GenericModule.Define {
 
         @Override
-        public T convert(Object value) {
+        public T1 convert(Object value) {
             Scanner scan = new Scanner(System.in);
             System.out.println("Enter number to convert to string: ");
             value = scan.next();
-            return (T) value.toString();
+            return (T1) value.toString();
         }
     }
 
@@ -29,29 +29,27 @@ public class GenericModule {
     //       (Створити конструктор, методи put, getMax)
 
 
-    static class MaxFinding<T> {
-        private T maxValue;
-        public MaxFinding(T value1, T value2){
+    static class MaxFinding<Integer> {
+        private Integer maxValue;
+        public MaxFinding(Integer value1, Integer value2){
 
         }
-
-        public T getMax() {
+        public Integer getMaxValue() {
             return maxValue;
         }
 
-        public T put(T value1, T value2) {
+        public Integer put(Integer value1, Integer value2) {
             Scanner scanValue = new Scanner(System.in);
             System.out.println("Enter number: ");
-            value1 = (T) scanValue.next();
+            value1 = (Integer) scanValue.nextLine();
             System.out.println("Enter second number: ");
-            value2 = (T) scanValue.next();
-            if ((int) value1 > (int) value2) {
+            value2 = (Integer) scanValue.nextLine();
+            if (value1 >  value2) {
                 maxValue = value1;
-                return maxValue;
             } else {
                 maxValue = value2;
-                return maxValue;
             }
+            return maxValue;
         }
     }
 
