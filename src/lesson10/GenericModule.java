@@ -9,18 +9,18 @@ public class GenericModule {
     // незалежними загальними типами. Він визначає метод перетворення, який приймає один
     // параметр одного типу та повертає перетворений результат іншого типу.
 
-    interface Define<T> {
-        <T1, T2> T1 convert(T1 value);
+    interface Define<F, T> {
+        T convert(F from);
     }
 
-    static class Defined<T1, T2> implements GenericModule.Define {
+    static class Defined<F, T> implements GenericModule.Define {
 
         @Override
-        public T1 convert(Object value) {
+        public T convert(Object value) {
             Scanner scan = new Scanner(System.in);
             System.out.println("Enter number to convert to string: ");
             value = scan.next();
-            return (T1) value.toString();
+            return (T) value.toString();
         }
     }
 
