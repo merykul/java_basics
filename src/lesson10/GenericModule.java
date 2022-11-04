@@ -18,7 +18,7 @@ public class GenericModule {
         @Override
         public T convert(Object value) {
             Scanner scan = new Scanner(System.in);
-            System.out.println("Enter number to convert to string: ");
+            System.out.println("Enter value to convert to string: ");
             value = scan.next();
             return (T) value.toString();
         }
