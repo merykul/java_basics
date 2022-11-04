@@ -6,9 +6,9 @@ public class Main {
         //GenericModule.Defined defined = new GenericModule.Defined();
         //System.out.println(defined.convert(1));
 
-        //GenericModule.MaxFinding maxFinding = new GenericModule.MaxFinding<>(1,1);
-        //System.out.println(maxFinding.put(2,2));
-        //System.out.println(maxFinding.getMax());
+        GenericModule.MaxFinding maxFinding = new GenericModule.MaxFinding<>(4);
+        System.out.println(maxFinding.compare(4,56));
+        System.out.println(maxFinding.getMaxValue());
 
     }
 }

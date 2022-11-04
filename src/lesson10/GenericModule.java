@@ -1,5 +1,6 @@
 package lesson10;
 
+import java.util.Comparator;
 import java.util.Scanner;
 
 public class GenericModule {
@@ -29,29 +30,30 @@ public class GenericModule {
     //       (Створити конструктор, методи put, getMax)
 
 
-    static class MaxFinding<Integer> {
-        private Integer maxValue;
-        public MaxFinding(Integer value1, Integer value2){
+    static class MaxFinding<Number extends Comparable<Number>> implements Comparator<Number> {
+        private Number maxValue;
 
+        public MaxFinding(Number maxValue) {
+            this.maxValue = maxValue;
         }
-        public Integer getMaxValue() {
+
+        public int put(Number maxValue1, Number maxValue) {
+            return compare(maxValue, maxValue1);
+        }
+
+        @Override
+        public int compare(Number maxValue, Number maxValue1) {
+            return maxValue.compareTo(maxValue1);
+        }
+
+        public Number getMaxValue() {
             return maxValue;
         }
 
-        public Integer put(Integer value1, Integer value2) {
-            Scanner scanValue = new Scanner(System.in);
-            System.out.println("Enter number: ");
-            value1 = (Integer) scanValue.nextLine();
-            System.out.println("Enter second number: ");
-            value2 = (Integer) scanValue.nextLine();
-            if (value1 >  value2) {
-                maxValue = value1;
-            } else {
-                maxValue = value2;
-            }
-            return maxValue;
+        public void setMaxValue(Number maxValue) {
+            this.maxValue = maxValue;
         }
+
     }
-
 }
 
