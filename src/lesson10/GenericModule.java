@@ -35,12 +35,12 @@ public class GenericModule {
 
         public MaxFinding(T maxValue) {
             this.maxValue = maxValue;
+
         }
 
-        public int put(T maxValue1) {
-            return maxValue.compareTo(maxValue1);
+        public T put(T maxValue1) {
+            return maxValue.compareTo(maxValue1) > 0 ? maxValue : maxValue1;
         }
-
 
         public T getMaxValue() {
             return maxValue;
