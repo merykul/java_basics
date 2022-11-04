@@ -10,7 +10,7 @@ public class Main {
 
 
         GenericModule.MaxFinding maxFinding = new GenericModule.MaxFinding<>(12);     // 4-th task
-        System.out.println(maxFinding.put(56, 12));
+        System.out.println(maxFinding.put(56));
         System.out.println(maxFinding.getMaxValue());
 
     }

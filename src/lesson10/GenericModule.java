@@ -37,7 +37,7 @@ public class GenericModule {
             this.maxValue = maxValue;
         }
 
-        public int put(T maxValue1, T maxValue) {
+        public int put(T maxValue1) {
             return maxValue.compareTo(maxValue1);
         }
 
