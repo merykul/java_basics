@@ -30,7 +30,7 @@ public class GenericModule {
     //       (Створити конструктор, методи put, getMax)
 
 
-    static class MaxFinding<Number extends Comparable<Number>> implements Comparator<Number> {
+    static class MaxFinding<Number extends Comparable<Number>> {
         private Number maxValue;
 
         public MaxFinding(Number maxValue) {
@@ -38,20 +38,12 @@ public class GenericModule {
         }
 
         public int put(Number maxValue1, Number maxValue) {
-            return compare(maxValue, maxValue1);
-        }
-
-        @Override
-        public int compare(Number maxValue, Number maxValue1) {
             return maxValue.compareTo(maxValue1);
         }
 
+
         public Number getMaxValue() {
             return maxValue;
-        }
-
-        public void setMaxValue(Number maxValue) {
-            this.maxValue = maxValue;
         }
 
     }
