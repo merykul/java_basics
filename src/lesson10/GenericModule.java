@@ -3,8 +3,6 @@ package lesson10;
 import java.time.Year;
 
 public class GenericModule {
-
-    // 1 зд, можливо створити Factory
     static class SaveNew<T> {
         private T data;
         public SaveNew(T input){
@@ -19,6 +17,8 @@ public class GenericModule {
             this.data = data;
         }
     }
+
+    //2
 
     static class SaveValueWithMinAndMax<Integer extends Comparable<Integer>> {
         private Integer value;

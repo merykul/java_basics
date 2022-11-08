@@ -3,7 +3,7 @@ package lesson10;
 public class Main {
     public static void main(String[] args) {
 
-        GenericModule.SaveNew saveNew = new GenericModule.SaveNew<>(28);
+        GenericModule.SaveNew saveNew = new GenericModule.SaveNew<>(28); // 1-st task
         System.out.println(saveNew.getData());
 
         GenericModule.SaveValueWithMinAndMax saveValue = new GenericModule.SaveValueWithMinAndMax<>(); // 2-nd task
