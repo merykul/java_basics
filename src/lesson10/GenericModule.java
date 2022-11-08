@@ -1,11 +1,10 @@
 package lesson10;
 
-import java.time.Year;
-
 public class GenericModule {
     static class SaveNew<T> {
         private T data;
-        public SaveNew(T input){
+
+        public SaveNew(T input) {
             this.data = input;
         }
 
