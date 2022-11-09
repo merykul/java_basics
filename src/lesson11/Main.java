@@ -7,11 +7,11 @@ public class Main {
 
 // 1-st task
 
-        System.out.println("Age getting operation: ");
         ArrayList<Integer> userAge = new ArrayList<>();
         userAge.add(12);
         userAge.add(25);
         userAge.add(23);
+        System.out.println("Age getting operation: ");
         try {
             System.out.println(userAge.get(1));
         } catch (IndexOutOfBoundsException e) {
