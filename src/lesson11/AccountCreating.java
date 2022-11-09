@@ -8,8 +8,13 @@ public class AccountCreating {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
-
     }
+
+    public AccountCreating(String firstName, int age) {
+        this.firstName = firstName;
+        this.age = age;
+    }
+
     public int ageCheckingField(int age) throws CheckAgeAccess {
         this.age = age;
         if (age < 14) {
@@ -38,6 +43,9 @@ public class AccountCreating {
     }
 
     public String getLastName() {
+        if (lastName == null) {
+            throw new NullPointerException("User didn't entered last name during registration.");
+        }
         return lastName;
     }
 
