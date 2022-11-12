@@ -17,15 +17,12 @@ public class Main {
         System.out.println(isItEmpty.test(greeting[2]));
 
         Supplier<String> sayHello = () -> "Hello"; // 2-nd
-        print.accept(sayHello.get() + " everyone!" + "\n");
+        print.accept(sayHello.get() + " everyone! \n");
 
         BiFunction<Integer, String, String> printLineNTimes = (Integer n, String line) -> { // 3-rd
-            for (int i = 0; i < n; i++) {
-                return line;
-            }
-            return "End ";
+            return line.repeat(n);
         };
-        System.out.println(printLineNTimes.apply(5, "Line printed n times."));
+        System.out.println(printLineNTimes.apply(5, "Line printed n times. \n"));
 
         Supplier<Integer> randomNumber = () -> new Random().nextInt(); // 4-th
         for (int i = 0; i < 5; i++) {

@@ -4,7 +4,8 @@ public class AccountCreating {
     private String firstName;
     private String lastName;
     private int age;
-    public AccountCreating(String firstName, String lastName, int age){
+
+    public AccountCreating(String firstName, String lastName, int age) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
@@ -17,13 +18,15 @@ public class AccountCreating {
 
     public int ageCheckingField(int age) throws CheckAgeAccess {
         this.age = age;
-        if (age < 14) {
-            throw new CheckAgeAccess("You are too young! Please, wait " + (14 - age) + " years.");
+        try {
+            if (age < 14 && age > 120) {
+                throw new CheckAgeAccess("You are not in required age! ");
+            } else return this.age = age;
+        } catch (CheckAgeAccess c) {
+            throw new CheckAgeAccess("It is not appropriate data!");
+        } catch (RuntimeException r) {
+            throw new RuntimeException("It is runtime problem");
         }
-        else if (age > 120) {
-            throw new CheckAgeAccess("You entered invalid age.");
-        }
-        else return this.age = age;
     }
 
     public int getAge() {

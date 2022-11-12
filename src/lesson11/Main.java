@@ -3,7 +3,7 @@ package lesson11;
 import java.util.ArrayList;
 
 public class Main {
-    public static void main(String[] args) throws CheckAgeAccess {
+    public static void main(String[] args) throws Exception {
 
 // 1-st task
 
@@ -24,7 +24,7 @@ public class Main {
 // 2-nd task
 
         System.out.println("Access checking stage:");
-        gameAccess(8);
+        gameAccess(25);
         System.out.println("------------------------------------- \n");
 
 // 3-rd task
@@ -52,16 +52,17 @@ public class Main {
 
 // 5-th task
         C c = new C(45);
-        A a = new A(c.getNumber());
-        a.division(0);
+        A a = c;
+        System.out.println(c.division(1));
+        System.out.println(a.division(1));
 
     }
 
     public static void gameAccess(int age) throws CheckAgeAccess {
-        if (age < 7) {
-            throw new CheckAgeAccess("Your child is too young.");
+        if (age > 7 && age < 120) {
+            System.out.println("Access granted. ");
         } else {
-            System.out.println("Access granted - Your child is old enough.");
+            throw new CheckAgeAccess("It is not required age! ");
         }
     }
 }

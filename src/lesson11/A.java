@@ -6,9 +6,9 @@ public class A {
     public A(int number) throws ArithmeticException {
 
     }
-    public int division(int divisor) {
+    public int division(int divisor) throws Exception {
         if (divisor == 0) {
-            throw new ArithmeticException("You cannot divide by zero");
+            throw new Exception("You cannot divide by zero");
         } else return (getNumber() / divisor);
     }
 

@@ -19,15 +19,15 @@ public class GenericModule {
 
     //2
 
-    static class SaveValueWithMinAndMax<Integer extends Comparable<Integer>> {
-        private Integer value;
-        private Integer min;
-        private Integer max;
+    static class SaveValueWithMinAndMax<Number extends Comparable<Number>> {
+        private Number value;
+        private Number min;
+        private Number max;
 
         public SaveValueWithMinAndMax() {
         }
 
-        public Integer setMax(Integer v1, Integer v2, Integer v3) {
+        public Number setMax(Number v1, Number v2, Number v3) {
             if (v1.compareTo(v2) > 0 && v1.compareTo(v3) > 0) {
                 this.max = v1;
             } else if (v2.compareTo(v1) > 0 && v1.compareTo(v3) > 0) {
@@ -36,7 +36,7 @@ public class GenericModule {
             return this.max;
         }
 
-        public Integer setMin(Integer v1, Integer v2, Integer v3) {
+        public Number setMin(Number v1, Number v2, Number v3) {
             if (v1.compareTo(v2) < 0 && v1.compareTo(v3) < 0) {
                 this.min = v1;
             } else if (v2.compareTo(v1) < 0 && v1.compareTo(v3) < 0) {
@@ -45,7 +45,7 @@ public class GenericModule {
             return this.min;
         }
 
-        public Integer setValue(Integer v1, Integer v2, Integer v3) {
+        public Number setValue(Number v1, Number v2, Number v3) {
             if (v1.compareTo(v2) > 0 && v1.compareTo(v3) < 0) {
                 this.value = v1;
             } else if (v2.compareTo(v1) > 0 && v1.compareTo(v3) < 0) {
@@ -54,7 +54,7 @@ public class GenericModule {
             return this.value;
         }
 
-        public Integer getValue() {
+        public Number getValue() {
             return value;
         }
     }
