@@ -13,6 +13,9 @@ public class Main {
 
         System.out.println(averageOfValues(createdMap)); // 28
 
+        Map hexNumbers = new HashMap<>();
+        System.out.println(createMap(hexNumbers));
+
     }
 // 1-st task
     public static <K> Map<K, Integer> toMap(K[] ks) {
@@ -43,6 +46,15 @@ public class Main {
             sum += i;
         }
         return avg = sum / count;
+    }
+
+// 2-nd task
+
+    public static Map createMap(Map map) {
+        for (int i = 0; i < 1000; i++) {
+            map.put((i + 1), Integer.toHexString(i + 1));
+        }
+        return map;
     }
 
 }
