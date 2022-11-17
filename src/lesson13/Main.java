@@ -12,25 +12,28 @@ public class Main {
 
         System.out.println("----------------------------------------");
 
-        Iterator<String> iterator = words.iterator();
+      /*  Iterator<String> iterator = words.iterator();
         while (iterator.hasNext()) {
             if (iterator.next().length() > 6) {
                 words.remove(iterator.next());
             } else if (iterator.next().length() < 3) {
                 iterator.next().concat("*");
             } System.out.println(iterator.next());
-        }
+        }*/
 
         System.out.println("----------------------------------------");
 
         System.out.println(words.size()); //59
 
 // 2
-        Set setSorted = new HashSet<String>(words);
+        Set<String> setSorted = new HashSet<String>(words);
         System.out.println(setSorted.size()); //50
         Iterator<String> it = setSorted.iterator();
         while (it.hasNext()) {
             System.out.println(it.next());
+        }
+        for (String s: setSorted) {
+            System.out.println(s);
         }
 
 // 3
@@ -45,7 +48,7 @@ public class Main {
         Student s8 = new Student("Asly Kit", 454554545, "Programming");
         Student s9 = new Student("Cit Joy", 787287522, "PM");
 
-        HashSet students = new HashSet<>();
+        Set<Student> students = new HashSet<Student>();
         students.add(s0);
         students.add(s1);
         students.add(s2);
