@@ -12,14 +12,14 @@ public class Main {
 
         System.out.println("----------------------------------------");
 
-      /*  Iterator<String> iterator = words.iterator();
+        Iterator<String> iterator = words.iterator();
         while (iterator.hasNext()) {
             if (iterator.next().length() > 6) {
                 words.remove(iterator.next());
             } else if (iterator.next().length() < 3) {
                 iterator.next().concat("*");
             } System.out.println(iterator.next());
-        }*/
+        }
 
         System.out.println("----------------------------------------");
 
