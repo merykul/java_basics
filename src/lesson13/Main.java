@@ -7,38 +7,43 @@ public class Main {
 
 //1
         String string = "What is Java technology and why do I need it? Java is a programming language and computing platform first released by Sun Microsystems in 1995. It has evolved from humble beginnings to power a large share of today’s digital world, by providing the reliable platform upon which many services and applications are built. New, innovative products and digital services designed for the future continue to rely on Java, as well.";
-        Collection<String> words = new ArrayList<>(List.of(string.split(" ")));
-        System.out.println(words.size()); // number of words = 70;
+        string = string.replaceAll("[^a-zA-Z ]", "");
+        List<String> words = new ArrayList<>(List.of(string.split(" ")));
+        System.out.println("Number of words before any actions: " + words.size()); // number of words = 70;
 
-        System.out.println("----------------------------------------");
 
-        Iterator<String> iterator = words.iterator();
+        ListIterator<String> iterator = words.listIterator();
         while (iterator.hasNext()) {
-            if (iterator.next().length() > 6) {
-                words.remove(iterator.next());
-            } else if (iterator.next().length() < 3) {
-                iterator.next().concat("*");
-            } System.out.println(iterator.next());
+            String val = String.valueOf(iterator.hasNext());
+            if (val.length() > 6) {
+                iterator.remove();
+            } else if (val.length() < 3) {
+                iterator.set(val.concat("*".repeat(3 - val.length())));
+            }
         }
 
-        System.out.println("----------------------------------------");
+        System.out.println("Words after deleting longer than 6 and add * to shorter than 3: ");
+
+        for (String s : words) {
+            System.out.println(s);
+        }
 
         System.out.println(words.size()); //59
 
 // 2
-        Set<String> setSorted = new HashSet<String>(words);
+        Set<String> setSorted = new TreeSet<String>(words);
         System.out.println(setSorted.size()); //50
         Iterator<String> it = setSorted.iterator();
         while (it.hasNext()) {
             System.out.println(it.next());
         }
-        for (String s: setSorted) {
+        for (String s : setSorted) {
             System.out.println(s);
         }
 
 // 3
         Student s0 = new Student("Mariia Kulyk", 256255256, "Testing");
-        Student s1 = new Student("Jon Ng", 4589522,"Programming");
+        Student s1 = new Student("Jon Ng", 4589522, "Programming");
         Student s2 = new Student("Angy Kit", 989898988, "Managing");
         Student s3 = new Student("Sofy Oly", 454545454, "PM");
         Student s4 = new Student("Denis Fly", 454545122, "Testing");
@@ -47,6 +52,7 @@ public class Main {
         Student s7 = new Student("Aria Civil", 565368955, "Managing");
         Student s8 = new Student("Asly Kit", 454554545, "Programming");
         Student s9 = new Student("Cit Joy", 787287522, "PM");
+        Student s10 = new Student("Cit Joy", 787287522, "PM");
 
         Set<Student> students = new HashSet<Student>();
         students.add(s0);
@@ -59,6 +65,7 @@ public class Main {
         students.add(s7);
         students.add(s8);
         students.add(s9);
+        students.add(s10);
 
         System.out.println(students.size());
 

@@ -1,23 +1,30 @@
 package lesson13;
 
-public class Student {
-    @Override
-    public String toString() {
-        return "Student{" +
-                "faculty='" + faculty + '\'' +
-                ", fullName='" + fullName + '\'' +
-                ", telNumber=" + telNumber +
-                '}';
-    }
+import java.util.Objects;
 
-    private String faculty;
+public class Student {
+
+    private enum faculty{
+        PROGRAMMING, TESTING, PM, MANAGING
+    }
     private String fullName;
     private long telNumber;
 
     public Student (String fullName, long telNumber, String faculty) {
         this.fullName = fullName;
         this.telNumber = telNumber;
-        this.faculty = faculty;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Student student = (Student) o;
+        return telNumber == student.telNumber && Objects.equals(fullName, student.fullName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(fullName, telNumber);
+    }
 }
