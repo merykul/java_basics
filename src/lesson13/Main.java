@@ -14,7 +14,7 @@ public class Main {
 
         ListIterator<String> iterator = words.listIterator();
         while (iterator.hasNext()) {
-            String val = String.valueOf(iterator.hasNext());
+            String val = String.valueOf(iterator.next());
             if (val.length() > 6) {
                 iterator.remove();
             } else if (val.length() < 3) {
