@@ -74,10 +74,21 @@ public class Main {
                 .map(s -> new StringBuilder(s).reverse())
                 .toList();
 
+        List capitalizedAndReplaced = separateWords
+                .stream()
+                .map(String::toUpperCase)
+                .map(s -> s.replace("A", "#"))
+                .map(s -> s.replace("O", "#"))
+                .toList();
+
+        Map sortedUniqueWords = separateWords
+                .stream()
+                .mapMultiToInt();
+
         System.out.println("Number of unique words: " + nonRepeatedWords);
         System.out.println("Number of words with length less than 3: " + wordsWithLengthLessThree);
         System.out.println("Reversed words, which length is divisible by 2: " + reversedWords);
-
+        System.out.println("Words capitalized and symbols A and O replaced with #: " + capitalizedAndReplaced);
 
     }
 
