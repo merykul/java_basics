@@ -2,6 +2,8 @@ package lesson16;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
+
+// 2-nd task
         Thread firstThread = new Numbers("#1", 200);
         Thread secondThread = new Numbers("#2",200);
         Thread thirdThread = new Numbers("#3",250);
