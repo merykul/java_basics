@@ -14,5 +14,14 @@ public class Main {
         firstThread.start();
         secondThread.start();
         thirdThread.start();
+
+// 3-rd task
+
+        Thread oddNumbers = new OddNumbers("odd number");
+        Thread evenNumbers = new EvenNumbers("even number");
+
+        oddNumbers.start();
+        evenNumbers.start();
+
     }
 }
