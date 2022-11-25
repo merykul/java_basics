@@ -1,10 +1,14 @@
 package lesson16;
 
+import java.util.concurrent.Callable;
+
 public class Main {
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) throws Exception {
 
-// 1-st task #TO DO
+// 1-st task
 
+        Callable<Integer> task = new CallableNumber();
+        task.call();
 
 // 2-nd task
         Thread firstThread = new Numbers("#1", 200);
