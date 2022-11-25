@@ -1,6 +1,7 @@
 package lesson17;
 
 import java.util.*;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Main {
@@ -68,22 +69,21 @@ public class Main {
                 .filter(s -> s.length() < 3)
                 .count();
 
-        List reversedWords = separateWords
+        List<StringBuilder> reversedWords = separateWords
                 .stream()
                 .filter(s -> s.length() % 2 == 0)
                 .map(s -> new StringBuilder(s).reverse())
                 .toList();
 
-        List capitalizedAndReplaced = separateWords
+        List<String> capitalizedAndReplaced = separateWords
                 .stream()
                 .map(String::toUpperCase)
                 .map(s -> s.replace("A", "#"))
                 .map(s -> s.replace("O", "#"))
                 .toList();
 
-        Map sortedUniqueWords = separateWords
-                .stream()
-                .mapMultiToInt();
+        Map<String, Integer> sortedUniqueWords = separateWords.stream() // in progress
+                        .collect(Collectors.toMap());                   //
 
         System.out.println("Number of unique words: " + nonRepeatedWords);
         System.out.println("Number of words with length less than 3: " + wordsWithLengthLessThree);
