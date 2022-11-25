@@ -1,6 +1,7 @@
 package lesson17;
 
 import java.util.*;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -82,13 +83,14 @@ public class Main {
                 .map(s -> s.replace("O", "#"))
                 .toList();
 
-        Map<String, Integer> sortedUniqueWords = separateWords.stream() // in progress
-                        .collect(Collectors.toMap());                   //
+        Map<String, Integer> mapByLength = separateWords.stream()
+                        .collect(Collectors.toMap(Function.identity(), String::length, (left, right) -> left));
 
         System.out.println("Number of unique words: " + nonRepeatedWords);
         System.out.println("Number of words with length less than 3: " + wordsWithLengthLessThree);
         System.out.println("Reversed words, which length is divisible by 2: " + reversedWords);
         System.out.println("Words capitalized and symbols A and O replaced with #: " + capitalizedAndReplaced);
+        System.out.println("Sorted list into map (key -> word; value -> length): " + mapByLength);
 
     }
 
