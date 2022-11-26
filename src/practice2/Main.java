@@ -11,7 +11,7 @@ public class Main {
     public static void main(String[] args) {
 
         List<Account> accounts = Arrays.asList(
-                new Account((1L, "Justin", "Butler", "justin.butler@gmail.com",
+                new Account(1L, "Justin", "Butler", "justin.butler@gmail.com",
                         LocalDate.parse("2003-04-17"), Sex.MALE, LocalDate.parse("2016-06-13"), BigDecimal.valueOf(172966)),
                 new Account(2L, "Olivia", "Cardenas", "cardenas@mail.com",
                         LocalDate.parse("1930-01-19"), Sex.FEMALE, LocalDate.parse("2014-06-21"), BigDecimal.valueOf(38029)),
@@ -22,4 +22,5 @@ public class Main {
 
         );
     }
+
 }
