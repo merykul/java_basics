@@ -13,7 +13,8 @@ public class Main {
         int oddNumbersSum = Stream.generate(() -> new Random().nextInt())
                 .limit(100)
                 .filter(i -> i % 2 != 0)
-                .mapToInt(i -> i).sum();
+                .mapToInt(i -> i)
+                .sum();
 
         long evenNumbersCounted = Stream.generate(() -> new Random().nextInt())
                 .limit(100)
@@ -35,7 +36,7 @@ public class Main {
         String[] arrayOfStrings = stringData.split(" ");
 
         List<String> sortedStringData = Stream.of(arrayOfStrings)
-                .sorted((s1, s2) -> s2.length() - s1.length())
+                .sorted(Comparator.comparingInt(String::length))
                 .toList();
 
         System.out.println("Sorted string by theirs lengths: " + sortedStringData);

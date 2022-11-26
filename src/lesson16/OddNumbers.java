@@ -1,10 +1,10 @@
 package lesson16;
 
 public class OddNumbers extends Thread{
-    private String threadName;
-    public OddNumbers(String threadName) {
-        this.threadName = threadName;
+    public OddNumbers(String name) {
+        super(name);
     }
+
     @Override
     public void run() {
         printOddNumbers();
@@ -12,12 +12,9 @@ public class OddNumbers extends Thread{
     private synchronized void printOddNumbers() {
         for (int i = 0; i <= 9; i++) {
             if (i % 2 != 0) {
-                System.out.println(i + " -> " + getThreadName());
+                System.out.println(i + " -> " + getName());
             }
         }
     }
 
-    public String getThreadName() {
-        return threadName;
-    }
 }
